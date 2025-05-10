@@ -41,8 +41,8 @@ function readTasks(){
     for(let i = 0 ; i < taskData.length ; i++)  
  { 
     table += `
-       <tr class='flex gap-16 items-center justify-center max-sm:gap-8 '>
-            <td class='myTask pl-18 max-sm:pl-16' style="text-decoration: ${taskData[i].completed ? 'line-through' : 'none'}; color: ${taskData[i].completed ? 'red' : 'black'};">${i+1}-</td>
+       <tr class='flex gap-16 items-center justify-center max-sm:gap-2 '>
+            <td class='myTask pl-18 max-sm:pl-2' style="text-decoration: ${taskData[i].completed ? 'line-through' : 'none'}; color: ${taskData[i].completed ? 'red' : 'black'};">${i+1}-</td>
             <td class='myTask pl-6 max-sm:pl-2' style=" text-decoration: ${taskData[i].completed ? 'line-through' : 'none'}; color: ${taskData[i].completed ? 'red' : 'black'};">${taskData[i].input}</td>
             <td><button onclick='toggleBtn(${i})' class='p-3 toggle cursor-pointer ml-4' style="text-decoration: ${taskData[i].completed ? 'line-through' : 'none'}; color: ${taskData[i].completed ? 'red' : 'blue'};">Toggle</button></td>
             <td><button onclick="updateBtn(${i})" class='p-1 cursor-pointer  bg-red-500 rounded-lg text-blue-700'>update</button></td>
