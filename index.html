@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <!--Tailwind CSS-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!--Font Awesome-->
+<script src="https://kit.fontawesome.com/704a494cea.js" crossorigin="anonymous"></script>
+<style>
+  th, td ,tbody tr{
+    margin: 0 auto;
+  }
+  body{
+    overflow: hidden;
+  }
+  
+</style>
+
+</head>
+<body class="w-full">
+    <h2 class="text-center text-sky-900 py-10 font-extrabold text-3xl">My Tasks</h2>
+    <form class="text-center">
+    <input type="text" id="input" placeholder="add your task" class="border-none outline-none bg-yellow-50 p-4 lg:w-[500px] sm:w-[300px] rounded-lg"/>
+    <button id="create" onclick="readTasks()" type="submit" class="cursor-pointer p-4 hover:bg-sky-200 rounded-lg text-red-500 bg-red-100">Create</button>
+</form>
+<table class="bg-[#efefef] py-8 shadow-md border-collapse w-[40%] max-sm:w-fit mt-12 mx-auto rounded-lg" >
+  <thead class="bg-yellow-200 p-4 flex text-center w-[100%] pr-20 rounded-lg max-sm:w-fit">
+    <tr id="yourTask" class="flex gap-16 items-center justify-center w-[100%] mx-auto max-sm:gap-8">
+        <th class="pl-16">Num</th>
+        <th class="">Tasks</th>
+        <th class="">Toggle</th>
+        <th class="">Update</th>
+        <th class="">Delete</th>
+   </tr>
+</thead>
+<tbody id="tbody" class="p-4 flex flex-col w-fit">
+</tbody>
+</table>
+<div class="text-center">
+    <button class="cursor-pointer text-center p-2 bg-red-100 text-red-300 rounded-lg hover:bg-sky-200 mt-12" id="deleteAll" onclick="deleteAll()">DELETE ALL</button>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
